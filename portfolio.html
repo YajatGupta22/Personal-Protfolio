@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yajat-Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <a href = "portfolio.html" class = "logo"><h1>YAJAT GUPTA</h1></a>
+        <ul>
+            <li class = "active"><a href = "#">Home</a></li>
+            <li><a href = "#about">About Me</a></li>
+            <li><a href = "#">My Work</a></li>
+            <li><a href = "#">Avocation</a></li>
+            <li><a href = "#">Contact Me</a></li>
+        </ul>
+    </header>
+    <section>
+       <h1 id = "text">"Hello, Welcome!"</h1> 
+       <a href="#about" class = "Button"><strong>Scroll</strong> ↓ OR Just Say <strong>Hello!</strong></a>
+       <img src="Untitled-2.svg" id = "mountains">
+    </section>
+    <div id="about">
+        <h1>About Me</h1>
+        <p>
+            I'm a <strong>computer science engineering</strong> student with a passion for designing elegant solutions to complex problems. As a <strong>B.Tech</strong> undergraduate at <strong>IIIT Delhi</strong>, I have gained a strong foundation in core <strong>computer science concepts</strong> and <strong>design principles</strong>.<br><br>
+            In addition to my academic pursuits, I also have a keen interest in <strong>UX/UI design</strong>. I love building things from scratch and creating <strong>user-centered designs</strong> that solve real-world problems. I am always eager to learn and stay up-to-date with the latest industry trends and innovations.<br><br>
+            My skills include <strong>problem-solving</strong>, <strong>quick learning</strong>, and proficiency in various programming languages, including <strong>Java, Python, C</strong>. 
+            I also have experience in <strong>web development</strong>, where I have worked on building full-stack web applications using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
+            <br><br>
+
+        </p>
+        <a href="#about" class = "Button2"><strong>Skills</strong> ↓ </a>
+    </div>
+    <div class="skills">
+
+    </div>
+    <script>
+        let mountains = document.getElementById('mountains');
+        let text = document.getElementById('text');
+        window.addEventListener('scroll' , function(){
+            let value = window.scrollY;
+            text.style.marginRight = value * 2 + 'px';
+        })
+    </script>
+</body>
+</html>

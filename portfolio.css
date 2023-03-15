@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(#0f0028 , #8033fc);
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 19px 30px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+
+header .logo{
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 2.4em;
+    background-color: #0f0028;
+    border-radius: 20px;
+    background-color: #0f0028;
+    border-radius: 40px 40px 40px 0px;
+    padding: 4px 10px 4px 90px;
+}
+header h1{
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.05em;
+    
+}
+
+.logo h1:hover{
+    color: white;
+    font-weight: 840;
+    text-decoration: none;
+    font-size: 1.06em;
+    background-color: #0f0028;
+    border-radius: 20px;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header li a{
+    text-decoration: none;
+    color: rgb(255, 250, 241);
+    padding: 6px 15px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+header li a:hover{
+    background-color: azure;
+    color: black;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+section img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#text{
+    position: absolute;
+    color: white;
+    font-size: 4em;
+    transform: translateX(140px);
+}
+
+.Button{
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: white;
+    color: #0f0028;
+    font-size: 1.3em;
+    display:inline-block;
+    z-index: 10;
+    transform: translateY(210px);
+    animation-name: button;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+}
+@keyframes button{
+    0%{
+        text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: rgb(255, 239, 255);
+    color: #0f0028;
+    font-size: 1.3em;
+    display:inline-block;
+    z-index: 10;
+    transform: translateY(180px);
+    }
+    100%{
+        text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: rgb(255, 239, 255);
+    color: #0f0028;
+    font-size: 1.3em;
+    display:inline-block;
+    z-index: 10;
+    transform: translateY(185px);
+    }
+}
+
+#about{
+    position: relative;
+    padding: 40px;
+    background-color: #1f0429;
+}
+
+#about h1{
+    font-size: 3.5em;
+    color: rgb(230, 230, 230);
+    margin-bottom: 10px;
+}
+
+#about p{
+    font-size: 1.2em;
+    color: rgb(225, 225, 225);
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(to top , #1f0627 , transparent);
+    z-index: 6;
+}
+  body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 20px;
+    scroll-padding-bottom: 140px; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-margin-top: 80px;
+    scroll-margin-bottom: 140px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+p strong{
+    color: rgb(231, 223, 242);
+    font-size: 1.3em;
+}
+
+.Button2{
+    text-decoration: none;
+    border-radius: 40px;
+    background-color: white;
+    color: #0f0028;
+    font-size: 1.3em;
+    display:inline-block;
+    z-index: 10;
+    animation-name: button2;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+}
+@keyframes button2{
+    0%{
+        text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: rgb(255, 239, 255);
+    color: #0f0028;
+    font-size: 1.3em;
+    display:inline-block;
+    z-index: 10;
+    transform: translateY(9px);
+    }
+    100%{
+        text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: rgb(255, 239, 255);
+    color: #0f0028;
+    font-size: 1.3em;
+    display:inline-block;
+    z-index: 10;
+    transform: translateY(14px);
+    }
+}
