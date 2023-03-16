@@ -1,107 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yajat-Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
-</head>
-<body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="portfolio.css" />
+    <style>::-ms-input-placeholder {
+      color: rgb(252, 0, 0);
+    }</style>
+  </head>
+  <body>
     <header>
-        <a href = "portfolio.html" class = "logo"><h1>YAJAT GUPTA</h1></a>
-        <ul>
-            <li class = "active"><a href = "#">Home</a></li>
-            <li class="non-active"><a href = "#about">About Me</a></li>
-            <li class="non-active"><a href = "#">My Work</a></li>
-            <li class="non-active"><a href = "#">Avocation</a></li>
-            <li class="non-active"><a href = "#">Contact Me</a></li>
-        </ul>
+      <a href="portfolio.html" class="logo"><h1>YAJAT GUPTA</h1></a>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li class="non-active"><a href="#about">About Me</a></li>
+        <li class="non-active"><a href="#">My Work</a></li>
+        <li class="non-active"><a href="#">Avocation</a></li>
+        <li class="non-active"><a href="#">Contact Me</a></li>
+      </ul>
     </header>
     <section>
-       <h1 id = "text">Step into my World!</h1> 
-       <a href="#about" class = "Button"><strong>Scroll</strong> ↓ OR Just Say <strong>Hello!</strong></a>
-       <img src="Untitled-2.svg" id = "mountains">
+      <h1 id="text">Step into my World!</h1>
+      <a href="#about" class="Button"
+        ><strong>Scroll</strong> ↓ OR Just Say <strong>Hello!</strong></a
+      >
+      <img src="Untitled-2.svg" id="mountains" />
     </section>
     <div id="about">
-        <h1>About Me</h1>
-        <p>
-            I'm a <strong>computer science engineering</strong> student with a passion for designing elegant solutions to complex problems. As a <strong>B.Tech</strong> undergraduate at <strong>IIIT Delhi</strong>, I have gained a strong foundation in core <strong>computer science concepts</strong> and <strong>design principles</strong>.<br><br>
-            In addition to my academic pursuits, I also have a keen interest in <strong>UX/UI design</strong>. I love building things from scratch and creating <strong>user-centered designs</strong> that solve real-world problems. I am always eager to learn and stay up-to-date with the latest industry trends and innovations.<br><br>
-            My skills include <strong>problem-solving</strong>, <strong>quick learning</strong>, and proficiency in various programming languages, including <strong>Java, Python, C</strong>. 
-            I also have experience in <strong>web development</strong>, where I have worked on building full-stack web applications using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.
-            <br><br>
-
-        </p>
-        <div class="b2"><a href="#skills" class = "Button2"><strong>My Skills</strong> ↓ </a></div>
+      <h1>About Me</h1>
+      <p>
+        I'm a <strong>Computer Science Engineering</strong> student with a
+        passion for designing elegant solutions to complex problems. As a
+        <strong>B.Tech</strong> undergraduate at <strong>IIIT Delhi</strong>, I
+        have gained a strong foundation in core
+        <strong>computer science concepts</strong> and
+        <strong>design principles</strong>.<br /><br />
+        In addition to my academic pursuits, I also have a keen interest in
+        <strong>UX/UI design</strong>. I love building things from scratch and
+        creating <strong>user-centered designs</strong> that solve real-world
+        problems. I am always eager to learn and stay up-to-date with the latest
+        industry trends and innovations.<br /><br />
+        My skills include <strong>problem-solving</strong>,
+        <strong>quick learning</strong>, and proficiency in various programming
+        languages, including <strong>Java, Python, C</strong>. I also have
+        experience in <strong>web development</strong>, where I have worked on
+        building full-stack web applications using <strong>HTML</strong>,
+        <strong>CSS</strong>, and <strong>JavaScript</strong>. <br /><br />
+      </p>
+      <div class="b2">
+        <a href="#skills" class="Button2"><strong>My Skills</strong> ↓ </a>
+      </div>
     </div>
     <div class="skill_section">
-        <div id="skills">
-            <h2>Skills</h2>
-            <div class="a_type">
-                <h3>I'm a Proficient <span class="auto-type"></span></h3>
-                <h3>My areas of Strength are <span class="auto-type1"></span></h3>
-                <h3>I can code in <span class="auto-type2"></span></h3>
-                <h3>Tools & Technologies I know <span class="auto-type3"></span></h3>
-                <h3>Also have a grasp over <span class="auto-type4"></span></h3>
-
-            </div>
-            <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
-            <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-            <script>
-                var typed = new Typed(".auto-type" , {
-                    strings: ["UX/UI Designer" , "Web-Developer", "Problem Solver", "UX/UI Designer" , "Web-Developer", "Problem Solver" ,"UX/UI Designer" , "Web-Developer", "Problem Solver"] , 
-                    typeSpeed: 140,
-                    backSpeed: 100,
-                    loop: true,
-                    smartBackspace: true
-                })
-
-                var typed = new Typed(".auto-type1" , {
-                    strings: ["Operating Systems" , "DBMS" , "UX/UI" , "OOPS", "DS&A"] , 
-                    typeSpeed: 140,
-                    backSpeed: 100,
-                    loop: true,
-                    smartBackspace: true
-                })
-
-                var typed = new Typed(".auto-type2" , {
-                    strings: ["Java" , "Python" , "C" , "HTML" , "CSS" , "JS" , "MySQL"] , 
-                    typeSpeed: 140,
-                    backSpeed: 100,
-                    loop: true,
-                    smartBackspace: true
-                })
-
-                var typed = new Typed(".auto-type3" , {
-                    strings: ["GitHub" , "Adobe Suit Softwares" , "Linux" , "VS Code" , "Figma" , "MySQL Workbench"] , 
-                    typeSpeed: 140,
-                    backSpeed: 100,
-                    loop: true,
-                    smartBackspace: true
-                })
-
-                var typed = new Typed(".auto-type4" , {
-                    strings: ["Computer Architecture" , "Digital Circuits" , "Visual Design Comm."] , 
-                    typeSpeed: 140,
-                    backSpeed: 100,
-                    loop: true,
-                    smartBackspace: true
-                })
-            </script>
-
+      <div id="skills">
+        <h2>Skills</h2>
+        <div class="a_type">
+          <span class="text first-text"> I am a Proficient </span>
+          <span class="text sec-text"> Web developer </span>
         </div>
-        
+
+        <script>
+          const text1 = document.querySelector(".sec-text");
+          const textLoad = () => {
+            setTimeout(() => {
+              text1.textContent = "Web Developer";
+            }, 0);
+
+            setTimeout(() => {
+              text1.textContent = "UX/UI Designer";
+            }, 4000);
+
+            setTimeout(() => {
+              text1.textContent = "Programmer";
+            }, 8000);
+          };
+
+          textLoad();
+          setInterval(textLoad, 12000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> My areas of Strength are </span>
+          <span class="text sec-text1"> Operating Systems </span>
+        </div>
+
+        <script>
+          const text2 = document.querySelector(".sec-text1");
+          const textLoad2 = () => {
+            setTimeout(() => {
+              text2.textContent = "Operating Systems";
+            }, 0);
+
+            setTimeout(() => {
+              text2.textContent = "Database Management";
+            }, 4000);
+
+            setTimeout(() => {
+              text2.textContent = "Advanced Programming (OOPs)";
+            }, 8000);
+
+            setTimeout(() => {
+              text2.textContent = "UX/UI Designing";
+            }, 12000);
+
+            setTimeout(() => {
+              text2.textContent = "Data Structures & Algo";
+            }, 16000);
+          };
+
+          textLoad2();
+          setInterval(textLoad2, 20000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> I can code in </span>
+          <span class="text sec-text3"> Web developer </span>
+        </div>
+
+        <script>
+          const text3 = document.querySelector(".sec-text3");
+          const textLoad3 = () => {
+            setTimeout(() => {
+              text3.textContent = "JAVA";
+            }, 0);
+
+            setTimeout(() => {
+              text3.textContent = "Python";
+            }, 4000);
+
+            setTimeout(() => {
+              text3.textContent = "C Language";
+            }, 8000);
+
+            setTimeout(() => {
+              text3.textContent = "HTML & CSS";
+            }, 12000);
+
+            setTimeout(() => {
+              text3.textContent = "JavaScript";
+            }, 16000);
+          };
+
+          textLoad3();
+          setInterval(textLoad3, 20000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> Tools & Technologies worked on </span>
+          <span class="text sec-text4"> Web developer </span>
+        </div>
+
+        <script>
+          const text4 = document.querySelector(".sec-text4");
+          const textLoad4 = () => {
+            setTimeout(() => {
+              text4.textContent = "GitHub";
+            }, 0);
+
+            setTimeout(() => {
+              text4.textContent = "Adobe Suit Softwares";
+            }, 4000);
+
+            setTimeout(() => {
+              text4.textContent = "Linux";
+            }, 8000);
+
+            setTimeout(() => {
+              text4.textContent = "MySQL Workbench";
+            }, 12000);
+
+            setTimeout(() => {
+              text4.textContent = "Figma";
+            }, 16000);
+          };
+
+          textLoad4();
+          setInterval(textLoad4, 20000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> Also having a grasp over </span>
+          <span class="text sec-text5"> Web developer </span>
+        </div>
+
+        <script>
+          const text5 = document.querySelector(".sec-text5");
+          const textLoad5 = () => {
+            setTimeout(() => {
+              text5.textContent = "Digital Circuits";
+            }, 0);
+
+            setTimeout(() => {
+              text5.textContent = "Visual Communication Design";
+            }, 4000);
+
+            setTimeout(() => {
+              text5.textContent = "Arduinos & ML";
+            }, 8000);
+          };
+
+          textLoad5();
+          setInterval(textLoad5, 12000);
+        </script>
+      </div>
+    </div>
+
+    <div class="contact">
+      <form>
+        <h1>Let's Connect</h1>
+        <input type="text" id = "firstName" placeholder="First Name">
+        <input type="text" id = "firstName" placeholder="Last Name">
+        <input type="text" id = "firstName" placeholder="Contact Number">
+        <input type="text" id = "firstName" placeholder="abc@mail.com">
+        <!-- <h4>Type Your Message here...</h4>
+        <textarea></textarea> -->
+        <input type="submit" value="Send" id="Message">
+      </form>
+      
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/yajat-gupta-a051681a7/" target="_blank">LinkedIn</a>
+      
+      <a href="https://www.instagram.com/_yajat_gupta/" target="_blank">Instagram</a>
+
+      <a href="https://github.com/YajatGupta22" target="_blank">GitHub</a>
     </div>
 
     <script>
-        let mountains = document.getElementById('mountains');
-        let text = document.getElementById('text');
-        window.addEventListener('scroll' , function(){
-            let value = window.scrollY;
-            text.style.marginRight = value * 2 + 'px';
-        })
-        const skillLevels = document.querySelectorAll('.skill-level');
+      let mountains = document.getElementById("mountains");
+      let text = document.getElementById("text");
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        text.style.marginRight = value * 2 + "px";
+      });
+      const skillLevels = document.querySelectorAll(".skill-level");
     </script>
-</body>
+  </body>
 </html>
