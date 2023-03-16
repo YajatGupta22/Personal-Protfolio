@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yajat-Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <header>
+      <a href="portfolio.html" class="logo"><h1>YAJAT GUPTA</h1></a>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li class="non-active"><a href="#about">About Me</a></li>
+        <li class="non-active"><a href="#">My Work</a></li>
+        <li class="non-active"><a href="#">Avocation</a></li>
+        <li class="non-active"><a href="#">Contact Me</a></li>
+      </ul>
+    </header>
+    <section>
+      <h1 id="text">Step into my World!</h1>
+      <a href="#about" class="Button"
+        ><strong>Scroll</strong> ↓ OR Just Say <strong>Hello!</strong></a
+      >
+      <img src="Untitled-2.svg" id="mountains" />
+    </section>
+    <div id="about">
+      <h1>About Me</h1>
+      <p>
+        I'm a <strong>computer science engineering</strong> student with a
+        passion for designing elegant solutions to complex problems. As a
+        <strong>B.Tech</strong> undergraduate at <strong>IIIT Delhi</strong>, I
+        have gained a strong foundation in core
+        <strong>computer science concepts</strong> and
+        <strong>design principles</strong>.<br /><br />
+        In addition to my academic pursuits, I also have a keen interest in
+        <strong>UX/UI design</strong>. I love building things from scratch and
+        creating <strong>user-centered designs</strong> that solve real-world
+        problems. I am always eager to learn and stay up-to-date with the latest
+        industry trends and innovations.<br /><br />
+        My skills include <strong>problem-solving</strong>,
+        <strong>quick learning</strong>, and proficiency in various programming
+        languages, including <strong>Java, Python, C</strong>. I also have
+        experience in <strong>web development</strong>, where I have worked on
+        building full-stack web applications using <strong>HTML</strong>,
+        <strong>CSS</strong>, and <strong>JavaScript</strong>. <br /><br />
+      </p>
+      <div class="b2">
+        <a href="#skills" class="Button2"><strong>My Skills</strong> ↓ </a>
+      </div>
+    </div>
+    <div class="skill_section">
+      <div id="skills">
+        <h2>Skills</h2>
+        <div class="a_type">
+          <h3>I'm a Proficient <span class="auto-type"></span></h3>
+          <h3>My areas of Strength are <span class="auto-type1"></span></h3>
+          <h3>I can code in <span class="auto-type2"></span></h3>
+          <h3>Tools & Technologies I know <span class="auto-type3"></span></h3>
+          <h3>Also have a grasp over <span class="auto-type4"></span></h3>
+        </div>
+
+        
+          
+      </div>
+    </div>
+    
+        <script>
+            // Define the options for the Typed object
+            var options = {
+              typeSpeed: 50,
+              loop: true,
+              backDelay: 900,
+              backSpeed: 30,
+            };
+          
+            // Create a single instance of the Typed object
+            var typed = new Typed(".auto-type", Object.assign({}, options, {
+              strings: ["UX/UI Designer", "Web-Developer", "Programmer"]
+            }));
+          
+            // Reuse the same Typed object with different strings
+            typed = new Typed(".auto-type1", Object.assign({}, options, {
+              strings: ["Operating Systems", "DBMS", "UX/UI", "OOPS", "DS&A"]
+            }));
+          
+            typed = new Typed(".auto-type2", Object.assign({}, options, {
+              strings: ["Java", "Python", "C", "HTML", "CSS", "JS", "MySQL"]
+            }));
+          
+            typed = new Typed(".auto-type3", Object.assign({}, options, {
+              strings: ["GitHub", "Adobe Suit Softwares", "Linux", "VS Code", "Figma", "MySQL Workbench"]
+            }));
+          
+            typed = new Typed(".auto-type4", Object.assign({}, options, {
+              strings: ["Computer Architecture", "Digital Circuits", "Visual Design Comm."]
+            }));
+          </script>
+    <script>
+      let mountains = document.getElementById("mountains");
+      let text = document.getElementById("text");
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        text.style.marginRight = value * 2 + "px";
+      });
+      const skillLevels = document.querySelectorAll(".skill-level");
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(#0f0028, #8033fc);
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 19px 30px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+
+header .logo {
+    color: rgb(200, 133, 255);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 2.4em;
+    background-color: #0f0028;
+    border-radius: 20px;
+    background-color: #0f0028;
+    border-radius: 40px 40px 40px 0px;
+    padding: 4px 10px 4px 90px;
+}
+
+header h1 {
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.05em;
+
+}
+
+.logo h1:hover {
+    color: white;
+    font-weight: 840;
+    text-decoration: none;
+    font-size: 1.06em;
+    background-color: #0f0028;
+    border-radius: 20px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+/* header li a{
+    text-decoration: none;
+    color: rgb(255, 250, 241);
+    padding: 6px 15px;
+    border-radius: 20px;
+    background-color: black;
+} */
+
+.non-active a {
+    text-decoration: none;
+    color: rgb(255, 250, 241);
+    padding: 6px 15px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.active a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 6px 15px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+header li a:hover {
+
+    background-color: rgb(248, 227, 253);
+    color: black;
+}
+
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#text {
+    position: absolute;
+    color: white;
+    font-size: 4em;
+    transform: translateX(140px);
+    /* transform: translateY(-10px); */
+}
+
+.button {
+    display: flex;
+}
+
+.Button1 {
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: white;
+    color: #0f0028;
+    font-size: 1.3em;
+    display: inline-block;
+    z-index: 10;
+    transform: translateY(210px);
+}
+
+.Button {
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: white;
+    color: #0f0028;
+    font-size: 1.3em;
+    display: inline-block;
+    z-index: 10;
+    transform: translateY(210px);
+    animation-name: button;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes button {
+    0% {
+        text-decoration: none;
+        padding: 8px 30px;
+        border-radius: 40px;
+        background-color: rgb(255, 239, 255);
+        color: #0f0028;
+        font-size: 1.3em;
+        display: inline-block;
+        z-index: 10;
+        transform: translateY(180px);
+    }
+
+    100% {
+        text-decoration: none;
+        padding: 8px 30px;
+        border-radius: 40px;
+        background-color: rgb(255, 239, 255);
+        color: #0f0028;
+        font-size: 1.3em;
+        display: inline-block;
+        z-index: 10;
+        transform: translateY(185px);
+    }
+}
+
+#about {
+    position: relative;
+    padding: 40px 40px 10px 40px;
+    background-color: #1f0429;
+}
+
+#about h1 {
+    font-size: 3.5em;
+    color: rgb(230, 230, 230);
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: rgb(225, 225, 225);
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    background: linear-gradient(to top, #1f0627, transparent);
+    z-index: 6;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+p strong {
+    color: rgb(231, 223, 242);
+    font-size: 1.3em;
+}
+
+.Button2 {
+    text-decoration: none;
+    border-radius: 40px;
+    background-color: white;
+    color: #0f0028;
+    font-size: 1.3em;
+    display: inline-block;
+    z-index: 10;
+    animation-name: button2;
+    animation-duration: .75s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes button2 {
+    0% {
+        text-decoration: none;
+        padding: 8px 30px;
+        border-radius: 40px;
+        background-color: rgb(255, 239, 255);
+        color: #0f0028;
+        font-size: 1.3em;
+        display: inline-block;
+        z-index: 10;
+        transform: translateY(4px);
+    }
+
+    100% {
+        text-decoration: none;
+        padding: 8px 30px;
+        border-radius: 40px;
+        background-color: rgb(255, 239, 255);
+        color: #0f0028;
+        font-size: 1.3em;
+        display: inline-block;
+        z-index: 10;
+        transform: translateY(9px);
+    }
+}
+
+.skills_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#skills {
+
+    background: linear-gradient(to bottom, #23052c, rgb(82, 41, 111));
+    /* background-color:  rgb(248, 232, 255); */
+    padding-left: 60px;
+    padding-top: 30px;
+    padding-bottom: 130px;
+
+}
+
+#skills h2 {
+    display: block;
+    font-size: 3.2em;
+    font-weight: 800;
+    color: white;
+}
+
+.b2 {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a_type {
+    padding-top: 20px;
+    padding-left: 7px;
+
+}
+
+.a_type h3 {
+    color: white;
+    font-size: 1.8em;
+}
+
+.auto-type , .auto-type1 , .auto-type2 , .auto-type3 , .auto-type4{
+    color: #9e62ff;
+    font-size: 1.2em;
+}
