@@ -28,7 +28,7 @@ header{
 }
 
 header .logo{
-    color: white;
+    color: rgb(200, 133, 255);
     font-weight: 800;
     text-decoration: none;
     font-size: 2.4em;
@@ -39,7 +39,7 @@ header .logo{
     padding: 4px 10px 4px 90px;
 }
 header h1{
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 800;
     text-decoration: none;
     font-size: 1.05em;
@@ -66,7 +66,15 @@ header li{
     margin-left: 20px;
 }
 
-header li a{
+/* header li a{
+    text-decoration: none;
+    color: rgb(255, 250, 241);
+    padding: 6px 15px;
+    border-radius: 20px;
+    background-color: black;
+} */
+
+.non-active a{
     text-decoration: none;
     color: rgb(255, 250, 241);
     padding: 6px 15px;
@@ -74,10 +82,20 @@ header li a{
     background-color: black;
 }
 
+.active a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 6px 15px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
 header li a:hover{
-    background-color: azure;
+
+    background-color: rgb(248, 227, 253);
     color: black;
 }
+
 
 section{
     position: relative;
@@ -103,6 +121,23 @@ section img{
     color: white;
     font-size: 4em;
     transform: translateX(140px);
+    /* transform: translateY(-10px); */
+}
+
+.button{
+    display: flex;
+}
+
+.Button1{
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background-color: white;
+    color: #0f0028;
+    font-size: 1.3em;
+    display:inline-block;
+    z-index: 10;
+    transform: translateY(210px);
 }
 
 .Button{
@@ -146,7 +181,7 @@ section img{
 
 #about{
     position: relative;
-    padding: 40px;
+    padding: 40px 40px 10px 40px;
     background-color: #1f0429;
 }
 
@@ -173,19 +208,6 @@ section::before{
   body::-webkit-scrollbar {
     width: 0px;
     background: transparent;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scroll-padding-top: 20px;
-    scroll-padding-bottom: 140px; 
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scroll-margin-top: 80px;
-    scroll-margin-bottom: 140px;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
   }
 
 p strong{
@@ -215,7 +237,7 @@ p strong{
     font-size: 1.3em;
     display:inline-block;
     z-index: 10;
-    transform: translateY(9px);
+    transform: translateY(4px);
     }
     100%{
         text-decoration: none;
@@ -226,6 +248,70 @@ p strong{
     font-size: 1.3em;
     display:inline-block;
     z-index: 10;
-    transform: translateY(14px);
+    transform: translateY(9px);
     }
+}
+
+.skills_section{
+    display:flex;
+}
+
+#skills{
+    
+    background: linear-gradient(to bottom , #23052c , rgb(82, 41, 111));
+    /* background-color:  rgb(248, 232, 255); */
+    padding-left: 60px;
+    padding-top: 30px;
+    padding-bottom: 130px;
+}
+#skills h2{
+    display: block;
+    font-size: 3.2em;
+    font-weight: 800;
+    color: white;
+}
+
+.b2{
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a_type{
+    padding-top: 20px;
+    padding-left: 7px;
+    
+}
+
+.a_type h3{
+    color: white;
+    font-size: 1.8em;
+}
+
+.auto-type{
+    color: #9e62ff;
+    font-size: 1.2em;
+}
+
+.auto-type1{
+    color: #9e62ff;
+    font-size: 1.2em;
+}
+
+.auto-type2{
+    color: #9e62ff;
+    font-size: 1.2em;
+}
+
+.auto-type3{
+    color: #9e62ff;
+    font-size: 1.2em;
+}
+
+.auto-type4{
+    color: #9453fd;
+    font-size: 1.2em;
 }

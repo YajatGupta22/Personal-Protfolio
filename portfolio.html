@@ -12,14 +12,14 @@
         <a href = "portfolio.html" class = "logo"><h1>YAJAT GUPTA</h1></a>
         <ul>
             <li class = "active"><a href = "#">Home</a></li>
-            <li><a href = "#about">About Me</a></li>
-            <li><a href = "#">My Work</a></li>
-            <li><a href = "#">Avocation</a></li>
-            <li><a href = "#">Contact Me</a></li>
+            <li class="non-active"><a href = "#about">About Me</a></li>
+            <li class="non-active"><a href = "#">My Work</a></li>
+            <li class="non-active"><a href = "#">Avocation</a></li>
+            <li class="non-active"><a href = "#">Contact Me</a></li>
         </ul>
     </header>
     <section>
-       <h1 id = "text">"Hello, Welcome!"</h1> 
+       <h1 id = "text">Step into my World!</h1> 
        <a href="#about" class = "Button"><strong>Scroll</strong> ↓ OR Just Say <strong>Hello!</strong></a>
        <img src="Untitled-2.svg" id = "mountains">
     </section>
@@ -33,11 +33,67 @@
             <br><br>
 
         </p>
-        <a href="#about" class = "Button2"><strong>Skills</strong> ↓ </a>
+        <div class="b2"><a href="#skills" class = "Button2"><strong>My Skills</strong> ↓ </a></div>
     </div>
-    <div class="skills">
+    <div class="skill_section">
+        <div id="skills">
+            <h2>Skills</h2>
+            <div class="a_type">
+                <h3>I'm a Proficient <span class="auto-type"></span></h3>
+                <h3>My areas of Strength are <span class="auto-type1"></span></h3>
+                <h3>I can code in <span class="auto-type2"></span></h3>
+                <h3>Tools & Technologies I know <span class="auto-type3"></span></h3>
+                <h3>Also have a grasp over <span class="auto-type4"></span></h3>
 
+            </div>
+            <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+            <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed(".auto-type" , {
+                    strings: ["UX/UI Designer" , "Web-Developer", "Problem Solver", "UX/UI Designer" , "Web-Developer", "Problem Solver" ,"UX/UI Designer" , "Web-Developer", "Problem Solver"] , 
+                    typeSpeed: 140,
+                    backSpeed: 100,
+                    loop: true,
+                    smartBackspace: true
+                })
+
+                var typed = new Typed(".auto-type1" , {
+                    strings: ["Operating Systems" , "DBMS" , "UX/UI" , "OOPS", "DS&A"] , 
+                    typeSpeed: 140,
+                    backSpeed: 100,
+                    loop: true,
+                    smartBackspace: true
+                })
+
+                var typed = new Typed(".auto-type2" , {
+                    strings: ["Java" , "Python" , "C" , "HTML" , "CSS" , "JS" , "MySQL"] , 
+                    typeSpeed: 140,
+                    backSpeed: 100,
+                    loop: true,
+                    smartBackspace: true
+                })
+
+                var typed = new Typed(".auto-type3" , {
+                    strings: ["GitHub" , "Adobe Suit Softwares" , "Linux" , "VS Code" , "Figma" , "MySQL Workbench"] , 
+                    typeSpeed: 140,
+                    backSpeed: 100,
+                    loop: true,
+                    smartBackspace: true
+                })
+
+                var typed = new Typed(".auto-type4" , {
+                    strings: ["Computer Architecture" , "Digital Circuits" , "Visual Design Comm."] , 
+                    typeSpeed: 140,
+                    backSpeed: 100,
+                    loop: true,
+                    smartBackspace: true
+                })
+            </script>
+
+        </div>
+        
     </div>
+
     <script>
         let mountains = document.getElementById('mountains');
         let text = document.getElementById('text');
@@ -45,6 +101,7 @@
             let value = window.scrollY;
             text.style.marginRight = value * 2 + 'px';
         })
+        const skillLevels = document.querySelectorAll('.skill-level');
     </script>
 </body>
 </html>
