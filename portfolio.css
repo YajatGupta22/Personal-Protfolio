@@ -122,7 +122,7 @@ section img {
     position: absolute;
     color: white;
     font-size: 4em;
-    transform: translateX(140px);
+    transform: translateX(120px);
     /* transform: translateY(-10px); */
 }
 
@@ -184,15 +184,39 @@ section img {
 }
 
 #about {
-    position: relative;
-    padding: 40px 40px 10px 40px;
+    position: flex;
+    padding: 0px 40px 10px 40px;
     background-color: #1f0429;
 }
 
 #about h1 {
+    display: inline;
     font-size: 3.5em;
     color: rgb(230, 230, 230);
     margin-bottom: 10px;
+}
+
+#about a{
+    display: inline;
+    color: #ffffff;
+    font-size: .9em;
+}
+
+#about img {
+    height:70px;
+    margin-left: 760px;
+    display: inline;
+    font-size: 3.5em;
+    color: rgb(230, 230, 230);
+    /* margin-bottom: 10px; */
+}
+#about img:hover {
+    height:72px;
+    margin-left: 760px;
+    display: inline;
+    font-size: 3.5em;
+    color: rgb(230, 230, 230);
+    /* margin-bottom: 10px; */
 }
 
 #about p {
@@ -210,10 +234,10 @@ section::before {
     z-index: 6;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 0px;
     background: transparent;
-} */
+}
 
 p strong {
     color: rgb(231, 223, 242);
@@ -347,7 +371,6 @@ p strong {
     animation: animate 4s steps(12) infinite;
 }
 
-
 @keyframes animate{
     40%, 60%{
         left: 100%;
@@ -357,16 +380,16 @@ p strong {
     }
 }
 
-.contact{
-    min-height: 80vh;
+#contact{
+    min-height: 85vh;
     background: linear-gradient(to bottom , #1f0429, #6f1291);
     display : flex;
     justify-content: center;
     align-items: center;
-
+    /* height: 80vh; */
 }
 
-.contact form{
+#contact form{
     width: 670px;
     height: 400px;
     display: flex;
@@ -379,14 +402,14 @@ p strong {
     color: white;
 }
 
-.contact form h1{
+#contact form h1{
     color: white;
     font-size: 2.6em;
     font-weight: 560;
     text-align: center;
 }
 
-.contact form input{
+#firstName{
     width: 500px;
     height: 40px;
     outline: none;
@@ -408,19 +431,8 @@ p strong {
     font-weight: 650;
 }
 
-#Message:hover{
-    margin-top: 40px;
-    display: inline-block;
-    background-color: white;
-    width: 42%;
-    color:black;
-    border-radius: 25px;
-    font-size: 1.39em;
-    font-weight: 670;
-}
-
 .links{
-    min-height: 10vh;
+    min-height: vh;
     background-color: #6f1291;
     display : flex;
     justify-content: center;
@@ -452,3 +464,128 @@ p strong {
     border-radius: 25px;
     padding: 10px 40px 10px 40px;
 }
+
+#project{
+    display : flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    background: linear-gradient(to top , #380949 , #310e69);
+    width: 100%;
+    height:130vh;
+    /* border-bottom: 3px solid #29095d; */
+}
+
+.project-heading{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.project-heading h3{
+    font-size: 2.7rem;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    color: #ffffff;
+}
+
+.project-heading span{
+    margin-left: 43px;
+    color: rgb(255, 255, 255);
+    font-size: 1.13em;
+    font-weight: 580;
+}
+
+
+ ul {
+    list-style: none;
+    color:rgb(242, 210, 249);
+    font-size: 1.04em;
+    font-weight: 570;
+}
+
+.project-filter{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    border: 1px solid rgb(137, 26, 173);
+    border-radius: 10px;
+}
+.project-filter li {
+    margin: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+.active{
+    background-color: #4a1999;
+    border-radius: 15px;
+
+}
+
+#project img{
+    margin-top: px;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+#project img:hover{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    cursor: pointer;
+}
+
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .images .item-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 35px 44.5px 0px 36.5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .images .item-box.active1 {
+    opacity: 1;
+  }
+  
+  .item-box.hide {
+    opacity: 0.25;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  .home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    z-index: 999;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .home-btn:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+  }  

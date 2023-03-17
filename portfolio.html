@@ -7,9 +7,16 @@
     <title>Yajat-Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <link rel="stylesheet" href="portfolio.css" />
-    <style>::-ms-input-placeholder {
-      color: rgb(252, 0, 0);
-    }</style>
+    <link
+      rel="icon"
+      href="modern-initial-logo-2-letters-260nw-1748478920.svg"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      ::-ms-input-placeholder {
+        color: rgb(252, 0, 0);
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -17,21 +24,29 @@
       <ul>
         <li class="active"><a href="#">Home</a></li>
         <li class="non-active"><a href="#about">About Me</a></li>
-        <li class="non-active"><a href="#">My Work</a></li>
-        <li class="non-active"><a href="#">Avocation</a></li>
-        <li class="non-active"><a href="#">Contact Me</a></li>
+        <li class="non-active"><a href="#project">My Work</a></li>
+        <!-- <li class="non-active"><a href="#">Avocation</a></li> -->
+        <li class="non-active"><a href="#contact">Contact Me</a></li>
       </ul>
     </header>
-    <section>
+
+    <a href="#" class="home-btn">🔝</a>
+
+    <section id="showcase">
       <h1 id="text">Step into my World!</h1>
       <a href="#about" class="Button"
         ><strong>Scroll</strong> ↓ OR Just Say <strong>Hello!</strong></a
       >
+      <!-- <button id="voiceButton">Speak</button> -->
       <img src="Untitled-2.svg" id="mountains" />
     </section>
     <div id="about">
-      <h1>About Me</h1>
-      <p>
+      <h1 class="about heading">About Me</h1>
+
+      <a href="#about" onclick="speak()"><img src="4303420-200.svg" /></a>
+      <a href="#about" onclick="stopSpeaking()">Stop</a>
+      <br /><br />
+      <p id="paragraph-to-read">
         I'm a <strong>Computer Science Engineering</strong> student with a
         passion for designing elegant solutions to complex problems. As a
         <strong>B.Tech</strong> undergraduate at <strong>IIIT Delhi</strong>, I
@@ -208,23 +223,54 @@
       </div>
     </div>
 
-    <div class="contact">
+    <div id="project">
+      <div class="project-heading">
+        <span>Let's See My Work</span>
+        <h3>My Projects</h3>
+      </div>
+      <ul class="project-filter">
+        <li class="list active" data-filter="all">All</li>
+        <li class="list" data-filter="webd">Website Development</li>
+        <li class="list" data-filter="des">Design</li>
+        <li class="list" data-filter="gamed">Game Development</li>
+        <li class="list" data-filter="core">Core-CS</li>
+        <li class="list" data-filter="jour">Journals</li>
+      </ul>
+      <div class="images">
+        <div class="item-box" data-item="des"><img src="img5.svg" /></div>
+        <a href="https://google.com" target="_blank"
+          ><div class="item-box" data-item="des"><img src="im7.svg" /></div
+        ></a>
+        <div class="item-box" data-item="gamed"><img src="im4.svg" /></div>
+        <div class="item-box" data-item="jour"><img src="im3.svg" /></div>
+        <div class="item-box" data-item="jour"><img src="im2.svg" /></div>
+        <div class="item-box" data-item="core"><img src="im6.svg" /></div>
+        <div class="item-box" data-item="webd"><img src="im1.svg" /></div>
+      </div>
+    </div>
+
+    <div id="contact">
       <form>
         <h1>Let's Connect</h1>
-        <input type="text" id = "firstName" placeholder="First Name">
-        <input type="text" id = "firstName" placeholder="Last Name">
-        <input type="text" id = "firstName" placeholder="Contact Number">
-        <input type="text" id = "firstName" placeholder="abc@mail.com">
+        <input type="text" id="firstName" placeholder="First Name" />
+        <input type="text" id="firstName" placeholder="Last Name" />
+        <input type="text" id="firstName" placeholder="Contact Number" />
+        <input type="text" id="firstName" placeholder="abc@mail.com" />
         <!-- <h4>Type Your Message here...</h4>
         <textarea></textarea> -->
-        <input type="submit" value="Send" id="Message">
+        <input type="submit" value="Send" id="Message" />
       </form>
-      
     </div>
     <div class="links">
-      <a href="https://www.linkedin.com/in/yajat-gupta-a051681a7/" target="_blank">LinkedIn</a>
-      
-      <a href="https://www.instagram.com/_yajat_gupta/" target="_blank">Instagram</a>
+      <a
+        href="https://www.linkedin.com/in/yajat-gupta-a051681a7/"
+        target="_blank"
+        >LinkedIn</a
+      >
+
+      <a href="https://www.instagram.com/_yajat_gupta/" target="_blank"
+        >Instagram</a
+      >
 
       <a href="https://github.com/YajatGupta22" target="_blank">GitHub</a>
     </div>
@@ -237,6 +283,129 @@
         text.style.marginRight = value * 2 + "px";
       });
       const skillLevels = document.querySelectorAll(".skill-level");
+    </script>
+
+    <script>
+      let utterance; // global variable to hold SpeechSynthesisUtterance object
+
+      function speak() {
+        const paragraph = document.getElementById("paragraph-to-read");
+        if (!paragraph) {
+          console.error("Paragraph element not found.");
+          return;
+        }
+        const text = paragraph.textContent;
+        if (!text) {
+          console.error("Paragraph text not found.");
+          return;
+        }
+        const synth = window.speechSynthesis;
+        if (!synth) {
+          console.error("SpeechSynthesis API not supported.");
+          return;
+        }
+        if (utterance && synth.speaking) {
+          synth.cancel(); // stop speaking if already speaking
+        }
+        utterance = new SpeechSynthesisUtterance(text);
+        synth.speak(utterance);
+        console.log("Text spoken:", text);
+      }
+
+      function stopSpeaking() {
+        const synth = window.speechSynthesis;
+        if (!synth) {
+          console.error("SpeechSynthesis API not supported.");
+          return;
+        }
+        if (!utterance) {
+          console.warn("Utterance not defined.");
+          return;
+        }
+        if (utterance && synth.speaking) {
+          synth.cancel();
+        }
+      }
+    </script>
+    <!-- <script>
+      let list = document.querySelectorAll('.list');
+      let item_box = document.querySelectorAll('.item-box');
+
+      for(let i = 0 ; i<list.length ; i++){
+        list[i].addEventListener('click' , function(){
+          for(let j = 0; j<list.length; j++){
+            list[j].classList.remove('active');
+          }
+          this.classList.add('active');
+
+          let data_filter = this.getAttribute('data-filter');
+
+          for(let k = 0; k<item_box.length; k++){
+            item_box[k].classList.remove('hide');
+            item_box[k].classList.add('hide');
+
+            if(item_box[k].getAttribute('data-item') == data_filter || data_filter == "all"){
+              item_box[k].classList.remove('hide');
+              item_box[k].classList.add('active1');
+            }
+          }
+        })
+      }-->
+
+    <script>
+      const project = document.querySelector("#project");
+      const list = project.querySelectorAll(".list");
+      const itemBox = project.querySelectorAll(".item-box");
+
+      for (let i = 0; i < itemBox.length; i++) {
+        itemBox[i].classList.add("active1");
+      }
+
+      for (let i = 0; i < list.length; i++) {
+        list[i].addEventListener("click", function () {
+          for (let j = 0; j < list.length; j++) {
+            list[j].classList.remove("active");
+          }
+          this.classList.add("active");
+
+          const dataFilter = this.getAttribute("data-filter");
+
+          for (let k = 0; k < itemBox.length; k++) {
+            const dataItem = itemBox[k].getAttribute("data-item");
+            const shouldDisplay =
+              dataFilter === "all" || dataItem === dataFilter;
+
+            itemBox[k].classList.toggle("hide", !shouldDisplay);
+            itemBox[k].classList.toggle("active1", shouldDisplay);
+          }
+        });
+      }
+    </script>
+
+    <script>
+      alert("Please use Google Chrome & Allow Microphone Permission for better experience!");
+      if ('webkitSpeechRecognition' in window) {
+        var recognition = new webkitSpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
+        recognition.maxSpeechInputTime = 600000;
+        recognition.onresult = function(event) {
+          var userInput = event.results[0][0].transcript;
+          if (userInput === "hello" || userInput === "hallo" || userInput === "helo" || userInput === "halo") {
+            window.location.href = "file:///C:/Users/yajat/Desktop/Web%20Dev/Portfolio/portfolio.html#about";
+          }
+        };
+
+        recognition.onerror = function(event) {
+          console.error(event.error);
+        };
+
+        recognition.start();
+      } else {
+        console.error("Web Speech API is not supported in this browser");
+      }
+
     </script>
   </body>
 </html>
