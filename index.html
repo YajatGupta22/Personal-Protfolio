@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yajat-Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      rel="icon"
+      href="modern-initial-logo-2-letters-260nw-1748478920.svg"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      ::-ms-input-placeholder {
+        color: rgb(252, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="portfolio.html" class="logo"><h1>YAJAT GUPTA</h1></a>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li class="non-active"><a href="#about">About Me</a></li>
+        <li class="non-active"><a href="#project">My Work</a></li>
+        <li class="non-active"><a href="#avocations">Avocation</a></li>
+        <li class="non-active"><a href="#contact">Contact Me</a></li>
+      </ul>
+    </header>
+
+    <a href="#" class="home-btn">🔝</a>
+
+    <section id="showcase">
+      <h1 id="text">Step into my World!</h1>
+      <a href="#about" class="Button"
+        ><strong>Scroll</strong> ↓ OR Just Say <strong>Hello!</strong></a
+      >
+      <!-- <button id="voiceButton">Speak</button> -->
+      <img src="Untitled-2.svg" id="mountains" />
+    </section>
+    <div id="about">
+      <h1 class="about heading">About Me</h1>
+
+      <a href="#about" onclick="speak()"><img src="4303420-200.svg" /></a>
+      <a href="#about" onclick="stopSpeaking()">Stop</a>
+      <br /><br />
+      <p id="paragraph-to-read">
+        I'm a <strong>Computer Science Engineering</strong> student with a
+        passion for designing elegant solutions to complex problems. As a
+        <strong>B.Tech</strong> undergraduate at <strong>IIIT Delhi</strong> with a CGPA of 8.47, I
+        have gained a strong foundation in core
+        <strong>computer science concepts</strong> and
+        <strong>design principles</strong>.<br /><br />
+        In addition to my academic pursuits, I also have a keen interest in
+        <strong>UX/UI design</strong>. I love building things from scratch and
+        creating <strong>user-centered designs</strong> that solve real-world
+        problems. I am always eager to learn and stay up-to-date with the latest
+        industry trends and innovations.<br /><br />
+        My skills include <strong>problem-solving</strong>,
+        <strong>quick learning</strong>, and proficiency in various programming
+        languages, including <strong>Java, Python, C</strong>. I also have
+        experience in <strong>web development</strong>, where I have worked on
+        building full-stack web applications using <strong>HTML</strong>,
+        <strong>CSS</strong>, and <strong>JavaScript</strong>. <br /><br />
+      </p>
+      <div class="b2">
+        <a href="#skills" class="Button2"><strong>My Skills</strong> ↓ </a>
+      </div>
+    </div>
+    <div class="skills-section">
+    <div class="skill_section">
+      <div id="skills">
+        <h2>Skills</h2>
+        <div class="a_type">
+          <span class="text first-text"> I am a Proficient </span>
+          <span class="text sec-text"> </span>
+        </div>
+
+        <script>
+          const text1 = document.querySelector(".sec-text");
+          const textLoad = () => {
+            setTimeout(() => {
+              text1.textContent = "Web Developer";
+            }, 0);
+
+            setTimeout(() => {
+              text1.textContent = "Programmer";
+            }, 4000);
+          };
+
+          textLoad();
+          setInterval(textLoad, 8000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> My areas of Strength are </span>
+          <span class="text sec-text1"> </span>
+        </div>
+
+        <script>
+          const text2 = document.querySelector(".sec-text1");
+          const textLoad2 = () => {
+            setTimeout(() => {
+              text2.textContent = "Operating Systems";
+            }, 0);
+
+            setTimeout(() => {
+              text2.textContent = "Database Management";
+            }, 4000);
+
+            setTimeout(() => {
+              text2.textContent = "Advanced Programming";
+            }, 8000);
+
+            setTimeout(() => {
+              text2.textContent = "UX/UI Designing";
+            }, 12000);
+
+            setTimeout(() => {
+              text2.textContent = "Data Structures & Algo";
+            }, 16000);
+          };
+
+          textLoad2();
+          setInterval(textLoad2, 20000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> I can code in </span>
+          <span class="text sec-text3"> </span>
+        </div>
+
+        <script>
+          const text3 = document.querySelector(".sec-text3");
+          const textLoad3 = () => {
+            setTimeout(() => {
+              text3.textContent = "JAVA";
+            }, 0);
+
+            setTimeout(() => {
+              text3.textContent = "Python";
+            }, 4000);
+
+            setTimeout(() => {
+              text3.textContent = "C Language";
+            }, 8000);
+
+            setTimeout(() => {
+              text3.textContent = "HTML & CSS";
+            }, 12000);
+
+            setTimeout(() => {
+              text3.textContent = "JavaScript";
+            }, 16000);
+          };
+
+          textLoad3();
+          setInterval(textLoad3, 20000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> Tools & Technologies worked on </span>
+          <span class="text sec-text4"> </span>
+        </div>
+
+        <script>
+          const text4 = document.querySelector(".sec-text4");
+          const textLoad4 = () => {
+            setTimeout(() => {
+              text4.textContent = "GitHub";
+            }, 0);
+
+            setTimeout(() => {
+              text4.textContent = "Adobe Suit Softwares";
+            }, 4000);
+
+            setTimeout(() => {
+              text4.textContent = "Linux";
+            }, 8000);
+
+            setTimeout(() => {
+              text4.textContent = "MySQL Workbench";
+            }, 12000);
+
+            setTimeout(() => {
+              text4.textContent = "Figma";
+            }, 16000);
+          };
+
+          textLoad4();
+          setInterval(textLoad4, 20000);
+        </script>
+
+        <div class="a_type">
+          <span class="text first-text"> Also having a grasp over </span>
+          <span class="text sec-text5"> </span>
+        </div>
+
+        <script>
+          const text5 = document.querySelector(".sec-text5");
+          const textLoad5 = () => {
+            setTimeout(() => {
+              text5.textContent = "Digital Circuits";
+            }, 0);
+
+            setTimeout(() => {
+              text5.textContent = "Visual Communication Design";
+            }, 4000);
+
+            setTimeout(() => {
+              text5.textContent = "Arduinos & ML";
+            }, 8000);
+          };
+
+          textLoad5();
+          setInterval(textLoad5, 12000);
+        </script>
+      </div>
+    </div>
+  </div>
+
+    <div id="project">
+      <div class="project-heading">
+        <span>Let's See My Work</span>
+        <h3>My Projects</h3>
+      </div>
+      <ul class="project-filter">
+        <li class="list active" data-filter="all">All</li>
+        <li class="list" data-filter="webd">Website Development</li>
+        <li class="list" data-filter="des">Design</li>
+        <li class="list" data-filter="gamed">Game Development</li>
+        <li class="list" data-filter="core">Core-CS</li>
+        <li class="list" data-filter="jour">Journals</li>
+      </ul>
+      <div class="images">
+        <a href="https://drive.google.com/file/d/1NBaG72naMZN6L9gjXQ4x0ped5OLeG0KC/view?usp=sharing" target="_blank"
+          >
+        <div class="item-box" data-item="des"><img src="img5.svg" /></div></a>
+        <a href="https://drive.google.com/file/d/1WlUVBSCKBOIUtXmuKw0PIHerZQLS2yFX/view?usp=sharing" target="_blank"
+          ><div class="item-box" data-item="des"><img src="im7.svg" /></div
+        ></a>
+        <a href="https://github.com/YajatGupta22/AP_Project" target="_blank"
+          >
+        <div class="item-box" data-item="gamed"><img src="im4.svg" /></div></a>
+        <a href="https://drive.google.com/file/d/1rhTEJ102YkMJfg9QM5t_4NFe3VGcOfEi/view?usp=sharing" target="_blank"
+          >
+        <div class="item-box" data-item="jour"><img src="im3.svg" /></div></a>
+        <a href="https://www.canva.com/design/DAFTEqcyfoc/ZZ2bz7VNXkTly4-_oYbQCg/edit?analyticsCorrelationId=4ca43ce6-0cbe-4d29-9042-cd42f5ffdbae" target="_blank"
+          >
+        <div class="item-box" data-item="jour"><img src="im2.svg" /></div></a>
+        <a href="https://drive.google.com/file/d/1_t1MrjV3bF04CC2oaK91SUI7brAGwLqW/view?usp=sharing" target="_blank"
+          >
+        <div class="item-box" data-item="core"><img src="im6.svg" /></div></a>
+        <a href="#" target="_blank"
+          >
+        <div class="item-box" data-item="webd"><img src="im1.svg" /></div></a>
+      </div>
+    </div>
+
+    <div id="avocations">
+      <div class="project-heading1">
+        <span>Let's See My Hobbies</span>
+      </div>
+      <h1>My Avocations</h1>
+      <ul class="project-filter">
+        <li class="list active">Doodling</li>
+        <li class="list active">Photography</li>
+      </ul>
+      <div class="card">
+        <a href="https://myalbum.com/album/JQj4RRXjTyCuKm/" target="_blank"
+          >
+        <img src="Fotor_AI.png" /></a>
+        <a href="https://myalbum.com/album/J9QgkEtY4c2wAA/" target="_blank"
+          >
+        <img src="Fotor_AI (1).png" /></a>
+      </div>
+    </div>
+
+    <div id="contact">
+      <form>
+        <h1>Let's Connect</h1>
+        <input type="text" id="firstName" placeholder="First Name" />
+        <input type="text" id="firstName" placeholder="Last Name" />
+        <input type="text" id="firstName" placeholder="Contact Number" />
+        <input type="text" id="firstName" placeholder="abc@mail.com" />
+        <!-- <h4>Type Your Message here...</h4>
+        <textarea></textarea> -->
+        <input type="submit" value="Send" id="Message" />
+      </form>
+    </div>
+    <div class="links">
+      <a
+        href="https://www.linkedin.com/in/yajat-gupta-a051681a7/"
+        target="_blank"
+        >LinkedIn</a
+      >
+
+      <a href="https://www.instagram.com/_yajat_gupta/" target="_blank"
+        >Instagram</a
+      >
+
+      <a href="https://github.com/YajatGupta22" target="_blank">GitHub</a>
+
+      <a href="yajat21366@iiitd.ac.in" target="_blank">Mail Me</a>
+    </div>
+
+    <script>
+      let mountains = document.getElementById("mountains");
+      let text = document.getElementById("text");
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        text.style.marginRight = value * 2 + "px";
+      });
+      const skillLevels = document.querySelectorAll(".skill-level");
+    </script>
+
+    <script>
+      let utterance; // global variable to hold SpeechSynthesisUtterance object
+
+      function speak() {
+        const paragraph = document.getElementById("paragraph-to-read");
+        if (!paragraph) {
+          console.error("Paragraph element not found.");
+          return;
+        }
+        const text = paragraph.textContent;
+        if (!text) {
+          console.error("Paragraph text not found.");
+          return;
+        }
+        const synth = window.speechSynthesis;
+        if (!synth) {
+          console.error("SpeechSynthesis API not supported.");
+          return;
+        }
+        if (utterance && synth.speaking) {
+          synth.cancel(); // stop speaking if already speaking
+        }
+        utterance = new SpeechSynthesisUtterance(text);
+        synth.speak(utterance);
+        console.log("Text spoken:", text);
+      }
+
+      function stopSpeaking() {
+        const synth = window.speechSynthesis;
+        if (!synth) {
+          console.error("SpeechSynthesis API not supported.");
+          return;
+        }
+        if (!utterance) {
+          console.warn("Utterance not defined.");
+          return;
+        }
+        if (utterance && synth.speaking) {
+          synth.cancel();
+        }
+      }
+    </script>
+
+    <script>
+      const project = document.querySelector("#project");
+      const list = project.querySelectorAll(".list");
+      const itemBox = project.querySelectorAll(".item-box");
+
+      for (let i = 0; i < itemBox.length; i++) {
+        itemBox[i].classList.add("active1");
+      }
+
+      for (let i = 0; i < list.length; i++) {
+        list[i].addEventListener("click", function () {
+          for (let j = 0; j < list.length; j++) {
+            list[j].classList.remove("active");
+          }
+          this.classList.add("active");
+
+          const dataFilter = this.getAttribute("data-filter");
+
+          for (let k = 0; k < itemBox.length; k++) {
+            const dataItem = itemBox[k].getAttribute("data-item");
+            const shouldDisplay =
+              dataFilter === "all" || dataItem === dataFilter;
+
+            itemBox[k].classList.toggle("hide", !shouldDisplay);
+            itemBox[k].classList.toggle("active1", shouldDisplay);
+          }
+        });
+      }
+    </script>
+
+    <script>
+      alert(
+        "Please use Google Chrome & Allow Microphone Permission for better experience!"
+      );
+      if ("webkitSpeechRecognition" in window) {
+        var recognition = new webkitSpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = false;
+        recognition.lang = "en-US";
+        recognition.maxSpeechInputTime = 600000;
+        recognition.onresult = function (event) {
+          var userInput = event.results[0][0].transcript;
+          if (
+            userInput === "hello" ||
+            userInput === "hallo" ||
+            userInput === "helo" ||
+            userInput === "halo"
+          ) {
+            window.location.href =
+              "#about";
+          }
+        };
+
+        recognition.onerror = function (event) {
+          console.error(event.error);
+        };
+
+        recognition.start();
+      } else {
+        console.error("Web Speech API is not supported in this browser");
+      }
+    </script>
+    
+    <script>
+      const skillsSection = document.querySelector('.skills-section');
+
+window.addEventListener('scroll', () => {
+  const sectionTop = skillsSection.getBoundingClientRect().top;
+  const sectionBottom = skillsSection.getBoundingClientRect().bottom;
+
+  if (sectionTop <= window.innerHeight && sectionBottom >= 0) {
+    // Add class to start animation and reset it
+    skillsSection.classList.add('skills-section-visible', 'restart-animation');
+  } else {
+    // Remove class to stop animation
+    skillsSection.classList.remove('skills-section-visible');
+  }
+});
+
+// Add event listener to remove the reset class after the animation completes
+skillsSection.addEventListener('animationend', () => {
+  skillsSection.classList.remove('restart-animation');
+});
+
+    </script>
+
+  </body>
+</html>
