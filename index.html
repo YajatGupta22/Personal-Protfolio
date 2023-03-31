@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yajat-Portfolio</title>
@@ -278,6 +279,8 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <div id="contact">
       <form>
         <h1>Let's Connect</h1>
@@ -306,6 +309,117 @@
       <a href="yajat21366@iiitd.ac.in" target="_blank">Mail Me</a>
     </div>
 
+    <!-- CODE FOR PARTICLE EFFECT -->
+    <script>
+      particlesJS("contact" , {
+    "particles": {
+        "number": {
+            "value": 300,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+        },
+        "opacity": {
+            "value": 1,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.7,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 6000,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 100,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    }
+});
+
+    </script>
+
+
+    <!-- CODE FOR scroll in showcase -->
     <script>
       let mountains = document.getElementById("mountains");
       let text = document.getElementById("text");
@@ -316,6 +430,8 @@
       const skillLevels = document.querySelectorAll(".skill-level");
     </script>
 
+
+    <!-- CODE FOR text to speech -->
     <script>
       let utterance; // global variable to hold SpeechSynthesisUtterance object
 
@@ -359,6 +475,8 @@
       }
     </script>
 
+
+    <!-- CODE FOR filter effect -->
     <script>
       const project = document.querySelector("#project");
       const list = project.querySelectorAll(".list");
@@ -389,6 +507,8 @@
       }
     </script>
 
+
+    <!-- CODE FOR scroll to hello -->
     <script>
       alert(
         "Please use Google Chrome & Allow Microphone Permission for better experience!"
@@ -422,6 +542,7 @@
       }
     </script>
     
+    <!-- CODE FOR skill type restart -->
     <script>
       const skillsSection = document.querySelector('.skills-section');
 
@@ -444,6 +565,7 @@ skillsSection.addEventListener('animationend', () => {
 });
 
     </script>
+
 
   </body>
 </html>
